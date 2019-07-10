@@ -204,8 +204,8 @@ uint32_t create_sealed_policy(uint8_t* sealed_log, uint32_t sealed_log_size )
 
         /*sealing the plaintext to ciphertext. The ciphertext can be delivered
         outside of enclave.*/
-        ret = sgx_seal_data(0, NULL,sizeof(data2seal),(uint8_t*)&data2seal,
-            sealed_log_size, (sgx_sealed_data_t*)sealed_log);
+        //ret = sgx_seal_data(0, NULL,sizeof(data2seal),(uint8_t*)&data2seal,
+            //sealed_log_size, (sgx_sealed_data_t*)sealed_log);
     } while (0);
     
     /* remember to clear secret data after been used by memset_s */
